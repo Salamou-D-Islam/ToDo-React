@@ -2,17 +2,19 @@ import { useState } from "react";
 import viteLogo from "/vite.svg";
 import Button from "react-bootstrap/Button";
 
-function Item({ items }) {
+function Item({ items, onDelete }) {
   return (
     <>
       {items.map((item, index) => (
         <div
           key={index}
-          className="bg-fuchsia-800 mx-auto p-10 w-50 h-30 text-white flex flex-col -mt-90"
+          className="bg-fuchsia-800 mx-auto p-10 w-50 h-50 text-white flex flex-col -mt-90"
         >
-          <div>{item.title}</div>
+          <h1>{item.title}</h1>
           <hr />
-          <div>{item.desc}</div>
+          <h2>{item.desc}</h2>
+          <br />
+          <Button onClick={() => onDelete(index)}>Supprimer</Button>
         </div>
       ))}
     </>
