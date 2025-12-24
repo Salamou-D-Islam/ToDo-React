@@ -8,7 +8,7 @@ function Item({ items, onDelete }) {
       {items.map((item, index) => (
         <div
           key={index}
-          className="bg-fuchsia-800 mx-auto p-10 w-50 h-50 text-white flex flex-col -mt-90"
+          className="bg-fuchsia-800 mx-auto p-10 text-white flex flex-col"
         >
           <h1>{item.title}</h1>
           <hr />
